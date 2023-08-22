@@ -31,35 +31,14 @@ setInterval(() => {
 }, 2500)
 
 
-let mySwiper = document.querySelector(".mySwiper")
 
-var swiper = new Swiper(mySwiper, {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    grabCursor: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-        pauseMouseEnter: true,
-    },
-    slidesPerGroup:1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
+ var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      centeredSlides: true,
+      spaceBetween: 30,
+      grabCursor: true,
+      pagination: {
         el: ".swiper-pagination",
         clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },   
-})
-
-
-
-
-
-
-
-
-
+      },
+    });
