@@ -70,7 +70,7 @@ header {
     z-index: 999;
     background-color: #fff;
     
-}
+
 .header-container {
     display: flex;
     align-items: center;
@@ -84,17 +84,23 @@ header {
         justify-content: space-evenly;
         width: 636px;
         
-        :active {
-            background-color: #00BCD4;
-            font-weight: bold;
+        .active {
+            background-color: #2196F3;
+            color: #fff;
         }
 
         a {
             color: #000000;
             font-weight: 400;
+            padding: 8px;
+            border-radius: 10px;
         }
 
-
+        li a:hover {
+            background-color: #2196F3;
+            color: #fff;
+            transition: all 0.2s ;
+        }
     }
     
     .header-right {
@@ -109,10 +115,13 @@ header {
             background-color: #979797;
         }
     }
-}
+}}
 
 
 // Hero section 
+.hero {
+    padding-top: 20px;
+}
 .hero-text-wrapper {
     width: 596px;
     z-index: -1;
@@ -149,20 +158,53 @@ header {
         }
     }
     
-    .mySlider {
+    .mySlider:nth-child(1) {
         margin-bottom: 40px;
-        animation: heroSlider 1s linear forwards;
+        animation: heroSlider 1.4s ease;
+        z-index: -1;
     }
     
     @keyframes heroSlider {
         0% {
-            transform: translateX(-100px);
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .mySlider:nth-child(2) {
+        margin-bottom: 40px;
+        animation: heroSlider2 1.4s ease;
+        z-index: -1;
+    }
+    
+    @keyframes heroSlider2 {
+        0% {
+            transform: translateX(80px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    .mySlider:nth-child(3) {
+        margin-bottom: 40px;
+        animation: heroSlider3 1.4s ease;
+        z-index: -1;
+    }
+    
+    @keyframes heroSlider3 {
+        0% {
+            transform: translateX(-80px);
+        }
+        100% {
+            transform: translateX(0px);
         }
     }
     
     .mySlider3 {
         text-align: center;
-        margin: 40px 0;
         
         .hero-text-wrapper {
             margin: auto;
