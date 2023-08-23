@@ -1,18 +1,42 @@
-let headerNavList = document.querySelector('.header-list');
-let headerNavItems = ["Services", "Our Values", "Case Studies", "Blog", "Inner Pages"]
+// let headerNavList = document.querySelector('.header-list');
+// let headerNavItems = ["Services", "Our Values", "Case Studies", "Blog", "Inner Pages"]
 
 
-let headerNav = headerNavItems.map(function (element){
+// let headerNav = headerNavItems.map(function (element){
 
-    const navItem = document.createElement("li");
-    navItem.className = "header-item"
-    const navLink = document.createElement("a");
-    navLink.className = "header-link"
-    navLink.innerHTML = element
+//     const navItem = document.createElement("li");
+//     navItem.className = "header-item"
+//     const navLink = document.createElement("a");
+//     navLink.className = "header-link"
+//     navLink.innerHTML = element
+//     navLink.setAttribute("id", element.toLocaleLowerCase());
+//     console.log(navLink);
+
     
-    navItem.appendChild(navLink)
-    headerNavList.appendChild(navItem)
-})
+//     navItem.appendChild(navLink)
+//     headerNavList.appendChild(navItem)
+// })
+
+let sections = document.querySelectorAll("section")
+let navLinks = document.querySelectorAll("header nav a")
+
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top = window.scrollY
+    let offset = sec.offsetTop
+    let height = sec.offsetHeight
+    let id = sec.getAttribute("id")
+
+    if (top >= offset & top < offset + height) {
+      navLinks.forEach(links => {
+        links.classList.remove("active")
+        document.querySelector("header nav a[href*="+ id +"]").classList.add("active")
+      })
+    }
+  })
+}
+
+
 
 
 let counter = 1

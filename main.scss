@@ -6,6 +6,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+
 }
 
 img {
@@ -55,9 +57,20 @@ button {
     max-width: 1211px;
     width: 100%;
     margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 // Header section
+header {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    
+}
 .header-container {
     display: flex;
     align-items: center;
@@ -70,12 +83,18 @@ button {
         align-items: center;
         justify-content: space-evenly;
         width: 636px;
-    }
-    
-    .header-link:hover {
-        color: #2196F3;
-        text-decoration: underline;
-        transition: all .4s;
+        
+        :active {
+            background-color: #00BCD4;
+            font-weight: bold;
+        }
+
+        a {
+            color: #000000;
+            font-weight: 400;
+        }
+
+
     }
     
     .header-right {
@@ -96,6 +115,7 @@ button {
 // Hero section 
 .hero-text-wrapper {
     width: 596px;
+    z-index: -1;
     
     h2 {
         font-size: 44px;
@@ -310,7 +330,7 @@ button {
     
     
     // Client section
-  
+    
     .client-cards {
         display: flex;
         align-items: center;
@@ -405,68 +425,68 @@ button {
                 width: 100%;
                 height: 100%;
                 background-color: #fbf9f9;
-              }
-          
-              .swiper-slide {
+            }
+            
+            .swiper-slide {
                 text-align: center;
                 font-size: 18px;
                 background: #fff;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-              }
-          
-              .swiper-slide img {
+            }
+            
+            .swiper-slide img {
                 display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 10px;
-              }
-          
-              .swiper {
+            }
+            
+            .swiper {
                 width: 95%;
                 height: 80px;
                 margin-left: auto;
                 margin-right: auto;
-              }
-          
-              .swiper-slide {
+            }
+            
+            .swiper-slide {
                 background-size: cover;
                 background-position: center;
-              }
-          
-              .mySwiper2 {
+            }
+            
+            .mySwiper2 {
                 height: 80%;
                 width: 100%;
-              }
-          
-              .mySwiper {
+            }
+            
+            .mySwiper {
                 height: 20%;
                 box-sizing: border-box;
                 padding: 10px 0;
-              }
-          
-              .mySwiper1 .swiper-slide {
+            }
+            
+            .mySwiper1 .swiper-slide {
                 width: 25%;
                 height: 100%;
                 opacity: 0.7;
-              }
-          
-              .mySwiper1 .swiper-slide-thumb-active {
+            }
+            
+            .mySwiper1 .swiper-slide-thumb-active {
                 opacity: 1;
-              }
-          
-              .swiper-slide img {
+            }
+            
+            .swiper-slide img {
                 display: block;
                 width: 93%;
                 height: 350px;
                 object-fit: cover;
                 margin-bottom: 15px;
-              }
+            }
         }
-
-
+        
+        
     }
     
     
@@ -543,7 +563,7 @@ button {
         
         .footer-right {
             
-
+            
             .social-media {
                 display: flex;
                 margin-bottom: 30px;
@@ -558,7 +578,7 @@ button {
                     border-radius: 50%;
                 }
             }
-
+            
             select  {
                 width: 200px;
                 height: 40px;
