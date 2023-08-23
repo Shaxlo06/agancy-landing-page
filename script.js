@@ -31,6 +31,24 @@ setInterval(() => {
 }, 2500)
 
 
+let valueDisplays = document.querySelectorAll(".num")
+let interval = 10 
+
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"))
+
+  let duration = Math.floor(interval / endValue)
+  let counter = setInterval(function () {
+    startValue += 1
+    valueDisplay.textContent = startValue
+
+    if (startValue == endValue ) {
+      clearInterval(counter)
+    }
+  }, 1)
+})
+
 
  var swiper = new Swiper(".mySwiper", {
       slidesPerView: 4,
@@ -42,3 +60,34 @@ setInterval(() => {
         clickable: true,
       },
     });
+
+
+  const slider = new Swiper(".js-testimonials-slider", {
+    slidesPerView: 4,
+    grabCursor: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".js-testimonials-pagination",
+      clickable: true
+    }
+  })
+
+
+  var swiperImg = new Swiper(".mySwiper1", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiperImg2 = new Swiper(".mySwiper2", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });

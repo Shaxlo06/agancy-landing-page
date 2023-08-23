@@ -326,32 +326,62 @@ button {
   width: 750px;
   padding: 30px;
   display: block;
-  border: 1px solid red;
 }
-.study-container .study-right .images-top, .study-container .study-right .images-bottom {
+.study-container .study-right .swiper {
+  width: 100%;
+  height: 100%;
+  background-color: #fbf9f9;
+}
+.study-container .study-right .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
 }
-.study-container .study-right img {
-  width: 320px;
-  height: 100px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.study-container .study-right .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.study-container .study-right .swiper {
+  width: 95%;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.study-container .study-right .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.study-container .study-right .mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+.study-container .study-right .mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.study-container .study-right .mySwiper1 .swiper-slide {
+  width: 25%;
+  height: 100%;
   opacity: 0.7;
-  border-radius: 30px;
-  position: relative;
 }
-.study-container .study-right img::before {
-  content: "HI";
-  position: relative;
-}
-.study-container .study-right img:hover {
+.study-container .study-right .mySwiper1 .swiper-slide-thumb-active {
   opacity: 1;
-  transition: all 0.4s linear;
 }
-.study-container .study-right .images-top-left img:nth-child(1) {
-  height: 220px;
+.study-container .study-right .swiper-slide img {
+  display: block;
+  width: 93%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .started-container {

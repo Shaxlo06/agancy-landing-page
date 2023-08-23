@@ -308,6 +308,7 @@ button {
     
     
     // Client section
+  
     .client-cards {
         display: flex;
         align-items: center;
@@ -397,37 +398,73 @@ button {
             padding: 30px;
             display: block;
             
-            border: 1px solid red;
             
-            .images-top, .images-bottom {
+            .swiper {
+                width: 100%;
+                height: 100%;
+                background-color: #fbf9f9;
+              }
+          
+              .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                justify-content: flex-start;
-            }
-            img {
-                width: 320px;
-                height: 100px;
-                margin-right: 20px;
-                margin-bottom: 20px;
+              }
+          
+              .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+              }
+          
+              .swiper {
+                width: 95%;
+                height: 80px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+          
+              .swiper-slide {
+                background-size: cover;
+                background-position: center;
+              }
+          
+              .mySwiper2 {
+                height: 80%;
+                width: 100%;
+              }
+          
+              .mySwiper {
+                height: 20%;
+                box-sizing: border-box;
+                padding: 10px 0;
+              }
+          
+              .mySwiper1 .swiper-slide {
+                width: 25%;
+                height: 100%;
                 opacity: 0.7;
-                border-radius: 30px;
-                position: relative;
-            }
-            
-            img::before { 
-                content: "HI";
-                position: relative;
-            }
-            
-            img:hover {
+              }
+          
+              .mySwiper1 .swiper-slide-thumb-active {
                 opacity: 1;
-                transition: all .4s linear;
-            }
-            
-            .images-top-left img:nth-child(1) {
-                height: 220px;
-            }
+              }
+          
+              .swiper-slide img {
+                display: block;
+                width: 93%;
+                height: 350px;
+                object-fit: cover;
+                margin-bottom: 15px;
+              }
         }
+
+
     }
     
     
@@ -529,6 +566,7 @@ button {
         
         
     }
+    
     
     
     
