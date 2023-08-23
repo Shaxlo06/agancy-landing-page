@@ -252,10 +252,12 @@ button {
     
     
     // Services section
-    .services-container {
-        min-width: 1505px;
-        width: 100%;
+    .services {
         background-color: #E8F4FE;
+    }
+    
+    .services-container {
+        
         padding: 40px;
         
         .services-title {

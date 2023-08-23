@@ -16,7 +16,6 @@ let headerNav = headerNavItems.map(function (element){
 
 
 let counter = 1
-
 setInterval(() => {
 
     document.querySelector(".mySlider.show").classList.remove("show")
